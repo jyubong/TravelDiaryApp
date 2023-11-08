@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarModifyActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/cm_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_tertiary70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="수정하기"
+        app:titleTextColor="@color/white">
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cm_placeTextTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cm_toolbar">
+
+        <fragment
+            android:id="@+id/cm_mapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/cm_placeTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="장소"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cm_placeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cm_placeTextTitle"
+        app:layout_constraintEnd_toStartOf="@+id/modify_map_button"
+        app:layout_constraintStart_toStartOf="@+id/cm_categorySpinner"
+        app:layout_constraintTop_toTopOf="@+id/cm_placeTextTitle" />
+
+    <Button
+        android:id="@+id/cm_map_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/material_dynamic_tertiary60"
+        android:layout_marginRight="20dp"
+        android:text="확인"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cm_placeTextTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cm_placeTextTitle" />
+
+    <TextView
+        android:id="@+id/cm_categoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="카테고리"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/cm_placeTextTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cm_placeTextTitle" />
+
+    <Spinner
+        android:id="@+id/cm_categorySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginRight="30dp"
+        android:text="카테고리"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cm_categoryTitle"
+        app:layout_constraintStart_toEndOf="@+id/cm_categoryTitle"
+        app:layout_constraintTop_toTopOf="@+id/cm_categoryTitle" />
+
+    <TextView
+        android:id="@+id/cm_detailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="상세 활동"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/cm_categoryTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cm_categoryTitle" />
+
+    <EditText
+        android:id="@+id/cm_detailTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="16dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cm_detailTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cm_categorySpinner"
+        app:layout_constraintTop_toTopOf="@+id/cm_detailTitle" />
+
+    <TextView
+        android:id="@+id/cm_withTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="누구랑"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/cm_detailTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cm_detailTitle" />
+
+    <EditText
+        android:id="@+id/cm_withTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cm_withTitle"
+        app:layout_constraintEnd_toEndOf="@+id/cm_detailTextView"
+        app:layout_constraintStart_toStartOf="@+id/cm_detailTextView"
+        app:layout_constraintTop_toTopOf="@+id/cm_withTitle" />
+
+    <TextView
+        android:id="@+id/cm_whenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="언제"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/cm_withTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cm_withTitle" />
+
+    <EditText
+        android:id="@+id/cm_whenTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="2023/06/20"
+        android:inputType="date"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cm_whenTitle"
+        app:layout_constraintStart_toStartOf="@+id/cm_withTextView"
+        app:layout_constraintTop_toTopOf="@+id/cm_whenTitle" />
+
+    <ImageView
+        android:id="@+id/cm_whenImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/calendar"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cm_whenTitle"
+        app:layout_constraintStart_toEndOf="@+id/cm_whenTextView"
+        app:layout_constraintTop_toTopOf="@+id/cm_whenTitle" />
+
+    <TextView
+        android:id="@+id/cm_memoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="메모"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/cm_whenTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cm_whenTitle" />
+
+    <EditText
+        android:id="@+id/cm_memoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cm_memoTitle"
+        app:layout_constraintEnd_toEndOf="@+id/cm_withTextView"
+        app:layout_constraintStart_toStartOf="@+id/cm_whenTextView"
+        app:layout_constraintTop_toTopOf="@+id/cm_memoTitle" />
+
+    <Button
+        android:id="@+id/cm_modifyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/material_dynamic_tertiary60"
+        android:text="수정"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

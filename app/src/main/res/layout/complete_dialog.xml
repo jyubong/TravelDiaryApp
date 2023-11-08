@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/completeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="완료하기"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/withTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="누구랑"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/completeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/completeTitle"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/withEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/withTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/withTextView"
+        app:layout_constraintTop_toTopOf="@+id/withTextView" />
+
+    <TextView
+        android:id="@+id/whenTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/withTextView"
+        app:layout_constraintTop_toBottomOf="@+id/withTextView"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/whenEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:hint="ex. 2023/6/30"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/whenTextView"
+        app:layout_constraintEnd_toStartOf="@+id/calendar_icon"
+        app:layout_constraintStart_toStartOf="@+id/withEditText"
+        app:layout_constraintTop_toTopOf="@+id/whenTextView" />
+
+    <ImageView
+        android:id="@+id/calendar_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/whenEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/withEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

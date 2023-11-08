@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/cd_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_tertiary70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="상세보기"
+        app:titleTextColor="@color/white">
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cd_placeTextTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cd_toolbar">
+
+        <fragment
+            android:id="@+id/cd_mapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/cd_placeTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="장소"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cd_placeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="장소"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_placeTextTitle"
+        app:layout_constraintStart_toStartOf="@+id/cd_categoryTextView"
+        app:layout_constraintTop_toTopOf="@+id/cd_placeTextTitle" />
+
+    <TextView
+        android:id="@+id/cd_categoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="카테고리"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/cd_placeTextTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cd_placeTextTitle" />
+
+    <TextView
+        android:id="@+id/cd_categoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginRight="30dp"
+        android:text="카테고리"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_categoryTitle"
+        app:layout_constraintStart_toEndOf="@+id/cd_categoryTitle"
+        app:layout_constraintTop_toTopOf="@+id/cd_categoryTitle" />
+
+    <TextView
+        android:id="@+id/cd_detailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="상세 활동"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/cd_categoryTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cd_categoryTitle" />
+
+    <TextView
+        android:id="@+id/cd_detailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상세활동"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_detailTitle"
+        app:layout_constraintStart_toStartOf="@+id/cd_categoryTextView"
+        app:layout_constraintTop_toTopOf="@+id/cd_detailTitle" />
+
+    <TextView
+        android:id="@+id/cd_withTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="누구랑"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/cd_detailTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cd_detailTitle" />
+
+    <TextView
+        android:id="@+id/cd_withTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="누구"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_withTitle"
+        app:layout_constraintStart_toStartOf="@+id/cd_detailTextView"
+        app:layout_constraintTop_toTopOf="@+id/cd_withTitle" />
+
+    <TextView
+        android:id="@+id/cd_whenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="언제"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/cd_withTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cd_withTitle" />
+
+    <TextView
+        android:id="@+id/cd_whenTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2023/06/20"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_whenTitle"
+        app:layout_constraintStart_toStartOf="@+id/cd_withTextView"
+        app:layout_constraintTop_toTopOf="@+id/cd_whenTitle" />
+
+    <TextView
+        android:id="@+id/cd_memoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="메모"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/cd_whenTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cd_whenTitle" />
+
+    <TextView
+        android:id="@+id/cd_memoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="메모"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_memoTitle"
+        app:layout_constraintStart_toStartOf="@+id/cd_whenTextView"
+        app:layout_constraintTop_toTopOf="@+id/cd_memoTitle" />
+
+    <Button
+        android:id="@+id/cd_modifyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/material_dynamic_tertiary60"
+        android:text="수정"
+        android:textSize="22dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cd_deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/material_dynamic_secondary70"
+        android:text="삭제"
+        android:textSize="22dp"
+        android:layout_marginRight="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cd_modifyButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

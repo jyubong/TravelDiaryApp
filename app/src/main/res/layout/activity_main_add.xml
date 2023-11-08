@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainAddActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_add_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_tertiary70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="추가하기"
+        app:titleTextColor="@color/white">
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/placeEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_add_toolbar">
+
+        <fragment
+            android:id="@+id/mapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/placeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="장소"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/placeEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        android:hint="장소를 입력하세요."
+        android:inputType="text"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/placeTextView"
+        app:layout_constraintEnd_toStartOf="@+id/map_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/placeTextView"
+        app:layout_constraintTop_toTopOf="@+id/placeTextView" />
+
+    <Button
+        android:id="@+id/map_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/material_dynamic_tertiary60"
+        android:text="확인"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/placeEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/placeEditText" />
+
+    <TextView
+        android:id="@+id/categoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="카테고리"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/placeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/placeTextView" />
+
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryTextView"
+        app:layout_constraintEnd_toEndOf="@+id/map_button"
+        app:layout_constraintStart_toEndOf="@+id/categoryTextView"
+        app:layout_constraintTop_toTopOf="@+id/categoryTextView" />
+
+    <TextView
+        android:id="@+id/detailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="상세 활동"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/categoryTextView"
+        app:layout_constraintTop_toBottomOf="@+id/categoryTextView" />
+
+    <EditText
+        android:id="@+id/detailEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="장소를 입력하세요."
+        android:inputType="text"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/detailTextView"
+        app:layout_constraintEnd_toEndOf="@+id/categorySpinner"
+        app:layout_constraintStart_toStartOf="@+id/categorySpinner"
+        app:layout_constraintTop_toTopOf="@+id/detailTextView" />
+
+    <TextView
+        android:id="@+id/memoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="메모"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="@+id/detailTextView"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextView" />
+
+    <EditText
+        android:id="@+id/memoEditText"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/memo_border"
+        android:gravity="top"
+        android:hint="메모를 남겨보세요."
+        android:maxLines="5"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/detailEditText"
+        app:layout_constraintStart_toStartOf="@+id/memoTextView"
+        app:layout_constraintTop_toBottomOf="@+id/memoTextView" />
+
+    <Button
+        android:id="@+id/main_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/material_dynamic_tertiary60"
+        android:text="추가"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memoEditText"
+        app:layout_goneMarginTop="20dp" />
+
+    <!--    <Button-->
+<!--        android:id="@+id/main_cancel_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:backgroundTint="@color/material_dynamic_neutral60"-->
+<!--        android:text="취소"-->
+<!--        android:textSize="22dp"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/memoEditText"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/memoEditText" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

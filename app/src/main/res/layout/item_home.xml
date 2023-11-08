@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="30dp"
+    app:cardCornerRadius="30dp"
+    android:backgroundTint="@color/material_dynamic_neutral_variant90">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeItemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/categoryImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detailItemTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="에버랜드 장미축제"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/categoryImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/placeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="장소 : "
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/detailItemTextView"
+            app:layout_constraintTop_toBottomOf="@+id/detailItemTextView" />
+
+        <TextView
+            android:id="@+id/placeItemTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="에버랜드"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/placeTitle"
+            app:layout_constraintTop_toTopOf="@+id/placeTitle" />
+
+        <TextView
+            android:id="@+id/memoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="메모 : "
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/detailItemTextView"
+            app:layout_constraintTop_toBottomOf="@+id/placeTitle" />
+
+        <TextView
+            android:id="@+id/memoItemTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="6월 30일까지 무조건!!!"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/memoTitle"
+            app:layout_constraintTop_toTopOf="@+id/memoTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
