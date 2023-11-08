@@ -22,10 +22,13 @@ Java를 이용한 Android 앱
 ## 👀 시각화 구조
 
 ## 🖥️ 실행 화면
-|메인 화면|로그인, 회원가입화면|아이디 중복 확인|비밀번호 일치 확인|
-|-|-|-|-|
-|<img src="https://github.com/jyubong/TravelDiaryApp/assets/126065608/4b1c677b-9fe2-41e2-9afa-1efdc73056d5" width="250" height="500">|<img src="https://github.com/jyubong/TravelDiaryApp/assets/126065608/fdfc80d9-97b9-4adf-a0f9-30dca94658ac" width="250" height="500">|<img src="https://github.com/jyubong/TravelDiaryApp/assets/126065608/69bea9ea-b07b-4d6a-96c7-518d45464ded" width="250" height="500">|<img src="https://github.com/jyubong/TravelDiaryApp/assets/126065608/45185586-de82-45dc-af8c-d2d98e3a27fb" width="250" height="500">|
+|메인 화면|로그인, 회원가입화면|
+|-|-|
+|<img src="https://github.com/jyubong/TravelDiaryApp/assets/126065608/4b1c677b-9fe2-41e2-9afa-1efdc73056d5" width="250" height="500">|<img src="https://github.com/jyubong/TravelDiaryApp/assets/126065608/fdfc80d9-97b9-4adf-a0f9-30dca94658ac" width="250" height="500">|
 
+|아이디 중복 확인|비밀번호 일치 확인|
+|-|-|
+|<img src="https://github.com/jyubong/TravelDiaryApp/assets/126065608/69bea9ea-b07b-4d6a-96c7-518d45464ded" width="250" height="500">|<img src="https://github.com/jyubong/TravelDiaryApp/assets/126065608/45185586-de82-45dc-af8c-d2d98e3a27fb" width="250" height="500">|
 
 
 ## 🔥 트러블 슈팅
